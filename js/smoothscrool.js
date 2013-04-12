@@ -17,7 +17,7 @@ $(document).ready(function() {
         var offset = 39;
 
         // duration in ms
-        var duration=1000;
+        var duration=800;
 
         // easing values: swing | linear
         var easing='swing';
@@ -38,9 +38,6 @@ $(document).ready(function() {
             }
 
             target = target - offset;
-
-            // set selector
-            var animationSelector='body:not(:animated)';
 
             // animate to target and set the hash to the window.location after the animation
             $('html:not(:animated)').animate({ scrollTop: target}, duration, easing);

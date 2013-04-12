@@ -73,7 +73,12 @@ a#donation {
     -o-transform: rotateY(25deg);
     -ms-transform: rotateY(25deg);
     -webkit-transform: rotateY(25deg);
-    transition: all 0.5s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    box-shadow: 10px 10px 5px #888888;
+}
+.rotateY img:hover {
+    transform:scale(2,2) translate(90px, 30px);
+    box-shadow: none;
 }
 
 /*
