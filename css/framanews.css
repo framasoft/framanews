@@ -1,0 +1,86 @@
+/* Pour la navbar-fixed-top */
+body {
+    padding-top: 40px;
+    text-align: justify;
+}
+/* Pour le lien de don à framasoft */
+a#donation {
+    background:url("../img/nav.png") no-repeat scroll -119px -60px transparent;
+    position: fixed;
+    bottom:0;
+    right:0;
+    height:63px;
+    width:63px;
+    text-decoration:none;
+    text-indent:-999em;
+    z-index:99;
+}
+#home, #kezako, #kezako-rss {
+    padding-left:5px;
+    padding-right:5px;
+}
+/*
+ * Slide d'accueil
+ */
+#home {
+    background-color: #EAEAFF;
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+#manchot {
+    padding-right:70px;
+}
+.big-title {
+    font-size: 200%;
+    font-family:fantasy;
+}
+.frama, .news {
+    text-shadow: 3px 3px 3px #888;
+}
+.frama {
+    color: blue;
+}
+.news {
+    color: orange;
+}
+#btn-ttrss {
+    margin-top: 50px;
+}
+
+/*
+ * Framanews ? C'est quoi ça ?
+ */
+#kezako {
+    background-color: #C8A6A6;
+    padding-top: 150px;
+    padding-bottom: 175px;
+}
+.rotateY {
+    width: 35%;
+    margin-top: -10px;
+    perspective: 350px;
+    -o-perspective: 350px;
+    -ms-perspective: 350px;
+    -webkit-perspective: 350px;
+    transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+.rotateY img {
+    transform: rotateY(25deg);
+    -o-transform: rotateY(25deg);
+    -ms-transform: rotateY(25deg);
+    -webkit-transform: rotateY(25deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+/*
+ * C'est quoi un flux RSS ?
+ */
+#kezako-rss {
+    background-color: #EDFFB5;
+    padding-top: 150px;
+    padding-bottom: 175px;
+}
