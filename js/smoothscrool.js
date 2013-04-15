@@ -14,7 +14,7 @@ $(document).ready(function() {
             return;
         }
         // offset for scrollspy and navbar-fixed-top
-        var offset = 39;
+        var offset = 83;
 
         // duration in ms
         var duration=800;

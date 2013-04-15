@@ -1,29 +1,30 @@
 /* Pour la navbar-fixed-top */
 body {
-    padding-top: 40px;
+    padding-top: 85px;
     text-align: justify;
 }
-/* Pour le lien de don à framasoft */
-a#donation {
-    background:url("../img/nav.png") no-repeat scroll -119px -60px transparent;
-    position: fixed;
-    bottom:0;
-    right:0;
-    height:63px;
-    width:63px;
-    text-decoration:none;
-    text-indent:-999em;
-    z-index:99;
-}
-#home, #kezako, #kezako-rss {
+#home, #kezako, #kezako-rss, #komen-sa-marche, #lorem, #install-at-home {
     padding-left:5px;
     padding-right:5px;
+}
+#framanews-nav {
+    font-size: 12px;
+}
+#framanews-nav .navbar-fixed-top {
+    top: 45px;
+}
+#framanews-nav .navbar-fixed-top .navbar-inner {
+    /*box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.1);*/
+    box-shadow:none;
+    /*background-image: linear-gradient(to bottom, #F2F2F2, #ECE2FF);*/
+    background: #ECE2FF;
+    border:none;
 }
 /*
  * Slide d'accueil
  */
 #home {
-    background-color: #EAEAFF;
+    background-color: #ECE2FF;
     padding-top: 200px;
     padding-bottom: 150px;
 }
@@ -88,4 +89,43 @@ a#donation {
     background-color: #EDFFB5;
     padding-top: 150px;
     padding-bottom: 175px;
+}
+#rss-symbol {
+    margin-top: 40px;
+    animation: RssSpin 7s infinite;
+    -webkit-animation: RssSpin 7s infinite;
+    animation-direction:alternate;
+    -webkit-animation-direction:alternate;
+}
+@keyframes RssSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(1080deg); }
+}
+@-webkit-keyframes RssSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(1080deg); }
+}
+/*
+ * Comment ça marche ?
+ */
+#komen-sa-marche {
+    background-color: #ECE2FF;
+    padding-top: 400px;
+    padding-bottom: 350px;
+}
+/*
+ * Lorem ipsum
+ */
+#lorem {
+    background-color: #2FF;
+    padding-top: 400px;
+    padding-bottom: 350px;
+}
+/*
+ * Et pour l'installer chez moi ?
+ */
+#install-at-home {
+    background-color: #ECE;
+    padding-top: 400px;
+    padding-bottom: 350px;
 }
