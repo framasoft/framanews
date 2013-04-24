@@ -1,11 +1,6 @@
 /* Pour la navbar-fixed-top */
 body {
     padding-top: 85px;
-    text-align: justify;
-}
-#home, #kezako, #kezako-rss, #komen-sa-marche, #lorem, #install-at-home {
-    padding-left:5px;
-    padding-right:5px;
 }
 #framanews-nav {
     font-size: 12px;
@@ -14,11 +9,16 @@ body {
     top: 45px;
 }
 #framanews-nav .navbar-fixed-top .navbar-inner {
-    /*box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.1);*/
     box-shadow:none;
-    /*background-image: linear-gradient(to bottom, #F2F2F2, #ECE2FF);*/
     background: #ECE2FF;
     border:none;
+}
+#NB-RSS {
+    padding-top: 80px;
+}
+.slide {
+    padding-top: 150px;
+    padding-bottom: 175px;
 }
 /*
  * Slide d'accueil
@@ -26,14 +26,19 @@ body {
 #home {
     background-color: #ECE2FF;
     padding-top: 200px;
-    padding-bottom: 150px;
+    padding-bottom: 200px;
 }
 #manchot {
     padding-right:70px;
 }
 .big-title {
-    font-size: 200%;
     font-family:fantasy;
+}
+.visible-desktop .big-title {
+    font-size: 200%;
+}
+.hidden-desktop .big-title {
+    font-size: 150%;
 }
 .frama, .news {
     text-shadow: 3px 3px 3px #888;
@@ -53,8 +58,6 @@ body {
  */
 #kezako {
     background-color: #C8A6A6;
-    padding-top: 150px;
-    padding-bottom: 175px;
 }
 .rotateY {
     width: 35%;
@@ -79,6 +82,9 @@ body {
 }
 .rotateY img:hover {
     transform:scale(2,2) translate(90px, 30px);
+    -o-transform:scale(2,2) translate(90px, 30px);
+    -ms-transform:scale(2,2) translate(90px, 30px);
+    -webkit-transform:scale(2,2) translate(90px, 30px);
     box-shadow: none;
 }
 
@@ -87,11 +93,9 @@ body {
  */
 #kezako-rss {
     background-color: #EDFFB5;
-    padding-top: 150px;
-    padding-bottom: 175px;
 }
 #rss-symbol {
-    margin-top: 40px;
+    margin: 0 0 5px 20px;
     animation: RssSpin 7s infinite;
     -webkit-animation: RssSpin 7s infinite;
     animation-direction:alternate;
@@ -110,22 +114,51 @@ body {
  */
 #komen-sa-marche {
     background-color: #ECE2FF;
-    padding-top: 400px;
-    padding-bottom: 350px;
 }
 /*
- * Lorem ipsum
+ * La framarticle_toolbar
  */
-#lorem {
-    background-color: #2FF;
-    padding-top: 400px;
-    padding-bottom: 350px;
+#framarticle_toolbar {
+    background-color: #63D322;
 }
 /*
- * Et pour l'installer chez moi ?
+ * Mobilité
  */
-#install-at-home {
+#mobilite {
+    background-color: #E2B63D;
+}
+
+.rotateY-right {
+    width: 35%;
+    margin-top: -10px;
+    perspective: 350px;
+    -o-perspective: 350px;
+    -ms-perspective: 350px;
+    -webkit-perspective: 350px;
+    transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+.rotateY-right img {
+    transform: rotateY(-25deg);
+    -o-transform: rotateY(-25deg);
+    -ms-transform: rotateY(-25deg);
+    -webkit-transform: rotateY(-25deg);
+    transition: all 0.4s ease-in-out 0s;
+    box-shadow: 10px 10px 5px #888888;
+}
+.rotateY-right img:hover {
+    transform:scale(2,2) translate(-90px, 30px);
+    -o-transform:scale(2,2) translate(-90px, 30px);
+    -ms-transform:scale(2,2) translate(-90px, 30px);
+    -webkit-transform:scale(2,2) translate(-90px, 30px);
+    box-shadow: none;
+}
+/*
+ * FAQ
+ */
+#faq {
     background-color: #ECE;
-    padding-top: 400px;
-    padding-bottom: 350px;
 }
