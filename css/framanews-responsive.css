@@ -8,6 +8,9 @@
     }
 }
 @media (max-width: 767px) {
+    .big-title {
+        font-size: 150%;
+    }
     #content {
         margin-left: -20px;
         margin-right: 20px;
@@ -15,5 +18,10 @@
     #content>div {
         padding-left: 20px;
         padding-right: 40px;
+    }
+}
+@media (max-width: 400px) {
+    .big-title {
+        font-size: 130%;
     }
 }
