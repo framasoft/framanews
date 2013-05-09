@@ -46,13 +46,46 @@ body {
     color: #6A5687;
 }
 .news {
+    color: #9BAE5F;
+}
+.soft {
     color: #EB7E41;
+}
+a .frama, a .soft {
+    font-weight: bold;
+}
+a {
+    color: #666;
+}
+a:hover {
+    color: #625092;
+}
+#content p,
+#content li {
+    font-family:DejaVu Sans, Verdana, Geneva, sans serif;
+    color: #333;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    font-family: PTSansCaption, GillSans, sans serif;
+    font-weight: bold;
+    color: #666;
+}
+#content h3 {
+    font-size: 24px;
+}
+#content h4 {
+    font-size: 18.2px;
 }
 /*
  * Framanews ? C'est quoi ça ?
  */
 #kezako {
-    background-color: #C8A6A6;
+    background-color: #EEE3FF;
 }
 .rotateY {
     width: 35%;
@@ -87,7 +120,7 @@ body {
  * C'est quoi un flux RSS ?
  */
 #kezako-rss {
-    background-color: #EDFFB5;
+    background-color: #E0EAFF;
 }
 #rss-symbol {
     margin: 0 0 5px 20px;
@@ -108,19 +141,19 @@ body {
  * Comment ça marche ?
  */
 #komen-sa-marche {
-    background-color: #ECE2FF;
+    background-color: #EBFFCC;
 }
 /*
  * La framarticle_toolbar
  */
 #framarticle_toolbar {
-    background-color: #63D322;
+    background-color: #FFDDC9;
 }
 /*
  * Mobilité
  */
 #mobilite {
-    background-color: #E2B63D;
+    background-color: #F5E7C1;
 }
 
 .rotateY-right {
@@ -155,5 +188,5 @@ body {
  * FAQ
  */
 #faq {
-    background-color: #ECE;
+    background-color: #FFD6D1;
 }
