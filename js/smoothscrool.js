@@ -1,12 +1,11 @@
 $(document).ready(function() {
-    
-    //
-    // jQuery SmoothScroll | Version 13-4-11
-    // based on http://blog.medianotions.de/en/articles/2009/smoothscroll-for-jquery
-    // modified by Luc Didry <luc @ fiat-tux.fr>
-    //
+    /*
+     * jQuery SmoothScroll | Version 13-05-10
+     * based on http://blog.medianotions.de/en/articles/2009/smoothscroll-for-jquery
+     * modified by Luc Didry <luc @ fiat-tux.fr>
+     */
 
-    $('.navbar li a').click(function(event) {
+    var smoothScroll = function(event) {
         event.preventDefault();
 
         // skip SmoothScroll on links inside sliders or scroll boxes also using anchors or if there is a javascript call
@@ -14,27 +13,27 @@ $(document).ready(function() {
             return;
         }
         // offset for scrollspy and navbar-fixed-top
-        var offset = 83;
+        var offset = 45;
 
         // duration in ms
-        var duration=800;
+        var duration = 800;
 
         // easing values: swing | linear
-        var easing='swing';
+        easing = 'swing';
 
         // get / set parameters
-        var newHash=this.hash;
-        var oldLocation=window.location.href.replace(window.location.hash, '');
-        var newLocation=this;
+        var newHash     = this.hash;
+        var oldLocation = window.location.href.replace(window.location.hash, '');
+        var newLocation = this;
 
         // make sure it's the same location        
-        if (oldLocation+newHash==newLocation) {
+        if (oldLocation + newHash == newLocation) {
             // get target
-            var target=$(this.hash+', a[name='+this.hash.slice(1)+']').offset().top;
+            var target = $(this.hash+', a[name=' + this.hash.slice(1) + ']').offset().top;
 
             // adjust target for anchors near the bottom of the page
-            if (target > $(document).height()-$(window).height()) {
-                target=$(document).height()-$(window).height();
+            if (target > $(document).height() - $(window).height()) {
+                target = $(document).height() - $(window).height();
             }
 
             target = target - offset;
@@ -43,6 +42,7 @@ $(document).ready(function() {
             $('html:not(:animated)').animate({ scrollTop: target}, duration, easing);
             $('body:not(:animated)').animate({ scrollTop: target}, duration, easing);
         }
-    });
-
+    };
+    $('.nav li a').click(smoothScroll);
+    $('.goto').click(smoothScroll);
 });

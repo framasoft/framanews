@@ -1,16 +1,27 @@
 /* Pour la navbar-fixed-top */
 body {
-    padding-top: 85px;
+    padding-top: 45px;
 }
-#framanews-nav {
+#framanews-nav > ul {
     font-size: 12px;
+    padding-top: 20px;
 }
-#framanews-nav .navbar-fixed-top {
-    top: 45px;
+#framanews-nav > ul > li {
+    background-color: #FFF;
 }
-#framanews-nav .navbar-fixed-top .navbar-inner {
-    box-shadow:4px;
-    background: #f6f6f6;
+#framanews-nav > ul > li:first-child,
+#framanews-nav > ul > li:first-child > a {
+    border-radius: 6px 6px 0 0;
+}
+#framanews-nav > ul > li:last-child,
+#framanews-nav > ul > li:last-child > a {
+    border-radius: 0 0 6px 6px;
+}
+.nav-list > li > a {
+    border: 1px solid #94DBFF;
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
 }
 #NB-RSS {
     padding-top: 80px;
@@ -19,18 +30,15 @@ body {
     padding-top: 100px;
     padding-bottom: 125px;
 }
+.beta {
+    height: 2em;
+}
 /*
  * Slide d'accueil
  */
 #home {
     padding-top: 40px;
     padding-bottom: 80px;
-}
-.beta {
-    background-image: url(../img/beta.png);
-    background-position: right;
-    background-repeat: no-repeat;
-    height: 177px;
 }
 .big-title {
     font-family:DejaVu Sans, Verdana, Geneva, sans serif;
@@ -85,7 +93,7 @@ a:hover {
  * Framanews ? C'est quoi ça ?
  */
 #kezako {
-    background-color: #EEE3FF;
+    background-color: #C9D7A1;
 }
 .rotateY {
     width: 35%;
@@ -120,7 +128,7 @@ a:hover {
  * C'est quoi un flux RSS ?
  */
 #kezako-rss {
-    background-color: #E0EAFF;
+    background-color: #9DCE88;
 }
 #rss-symbol {
     margin: 0 0 5px 20px;
@@ -141,19 +149,19 @@ a:hover {
  * Comment ça marche ?
  */
 #komen-sa-marche {
-    background-color: #EBFFCC;
+    background-color: #AACE9B;
 }
 /*
  * La framarticle_toolbar
  */
 #framarticle_toolbar {
-    background-color: #FFDDC9;
+    background-color: #C5D78D;
 }
 /*
  * Mobilité
  */
 #mobilite {
-    background-color: #F5E7C1;
+    background-color: #DBD8A4;
 }
 
 .rotateY-right {
@@ -188,5 +196,5 @@ a:hover {
  * FAQ
  */
 #faq {
-    background-color: #FFD6D1;
+    background-color: #DBD790;
 }
