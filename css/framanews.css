@@ -131,7 +131,7 @@ a:hover {
     background-color: #9DCE88;
 }
 #rss-symbol {
-    margin: 0 0 5px 20px;
+    margin: 0 10px 5px 10px;
     animation: RssSpin 7s infinite;
     -webkit-animation: RssSpin 7s infinite;
     animation-direction:alternate;
