@@ -5,6 +5,55 @@ body {
     padding-top: 45px;
 }
 /*
+ * Framasoft boilerplate
+ */
+.frama {
+    color: #6A5687;
+}
+.news {
+    color: #9BAE5F;
+}
+.soft {
+    color: #EB7E41;
+}
+#content a .frama, a .soft, a .news {
+    font-weight: bold;
+}
+#content a {
+    color: #666;
+    border-bottom: 1px dashed #666;
+}
+#content a:hover {
+    color: #625092;
+    text-decoration: none;
+    border-bottom: 1px dashed #625092;
+}
+#content a.btn,
+#content a.btn:hover{
+    border-bottom: none;
+}
+#content p,
+#content li {
+    font-family:DejaVu Sans, Verdana, Geneva, sans serif;
+    color: #333;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    font-family: PTSansCaption, GillSans, sans serif;
+    font-weight: bold;
+    color: #666;
+}
+#content h3 {
+    font-size: 24px;
+}
+#content h4 {
+    font-size: 18.2px;
+}
+/*
  * Menu de navigation
  */
 #framanews-nav > ul {
@@ -22,13 +71,13 @@ body {
 #framanews-nav > ul > li:last-child > a {
     border-radius: 0 0 6px 6px;
 }
-.nav-list > li > a {
+#framanews-nav >.nav-list > li > a {
     border: 1px solid #BCD772;
     display: block;
     margin: 0 0 -1px;
     padding: 8px 14px;
 }
-.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+#framanews-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
     background-color: #BCD772;
     color: #333333;
     text-shadow: none;
@@ -59,45 +108,6 @@ body {
     text-shadow: 3px 3px 3px #888;
     position: relative;
     bottom: -50%;
-}
-.frama {
-    color: #6A5687;
-}
-.news {
-    color: #9BAE5F;
-}
-.soft {
-    color: #EB7E41;
-}
-a .frama, a .soft {
-    font-weight: bold;
-}
-a {
-    color: #666;
-}
-a:hover {
-    color: #625092;
-}
-#content p,
-#content li {
-    font-family:DejaVu Sans, Verdana, Geneva, sans serif;
-    color: #333;
-}
-#content h1,
-#content h2,
-#content h3,
-#content h4,
-#content h5,
-#content h6 {
-    font-family: PTSansCaption, GillSans, sans serif;
-    font-weight: bold;
-    color: #666;
-}
-#content h3 {
-    font-size: 24px;
-}
-#content h4 {
-    font-size: 18.2px;
 }
 /*
  * Framanews ? C'est quoi ça ?
