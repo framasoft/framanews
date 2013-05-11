@@ -1,7 +1,12 @@
-/* Pour la navbar-fixed-top */
+/*
+ * Pour la framanav, il faut un padding-top sur le body
+ */
 body {
     padding-top: 45px;
 }
+/*
+ * Menu de navigation
+ */
 #framanews-nav > ul {
     font-size: 12px;
     padding-top: 20px;
@@ -18,20 +23,22 @@ body {
     border-radius: 0 0 6px 6px;
 }
 .nav-list > li > a {
-    border: 1px solid #94DBFF;
+    border: 1px solid #BCD772;
     display: block;
     margin: 0 0 -1px;
     padding: 8px 14px;
 }
-#NB-RSS {
-    padding-top: 80px;
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+    background-color: #BCD772;
+    color: #333333;
+    text-shadow: none;
 }
+/*
+ * Commun à toutes les slides, sauf à #home !
+ */
 .slide {
     padding-top: 100px;
     padding-bottom: 125px;
-}
-.beta {
-    height: 2em;
 }
 /*
  * Slide d'accueil
@@ -39,6 +46,9 @@ body {
 #home {
     padding-top: 40px;
     padding-bottom: 80px;
+}
+.beta {
+    height: 2em;
 }
 .big-title {
     font-family:DejaVu Sans, Verdana, Geneva, sans serif;
@@ -144,6 +154,9 @@ a:hover {
 @-webkit-keyframes RssSpin {
     from { -webkit-transform: rotate(0deg); }
     to { -webkit-transform: rotate(1080deg); }
+}
+#NB-RSS {
+    padding-top: 80px;
 }
 /*
  * Comment ça marche ?
