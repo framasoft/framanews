@@ -20,8 +20,8 @@ body {
     font-weight: bold;
 }
 #content a {
-    color: #666;
-    border-bottom: 1px dashed #666;
+    color: #888;
+    border-bottom: 1px dashed #888;
 }
 #content a:hover {
     color: #625092;
