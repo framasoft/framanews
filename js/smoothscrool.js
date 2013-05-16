@@ -43,6 +43,6 @@ $(document).ready(function() {
             $('body:not(:animated)').animate({ scrollTop: target}, duration, easing);
         }
     };
-    $('.nav li a').click(smoothScroll);
+    $('#framanews-nav .nav li a').click(smoothScroll);
     $('.goto').click(smoothScroll);
 });
