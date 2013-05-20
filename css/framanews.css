@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'PT Sans Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Caption'), local('PTSans-Caption'), url(../fonts/ptsanscaption.woff) format('woff');
+}
 /*
  * Pour la framanav, il faut un padding-top sur le body
  */
@@ -34,7 +40,7 @@ body {
 }
 #content p,
 #content li {
-    font-family: DejaVu Sans, Verdana, Geneva, sans-serif;
+    font-family: 'DejaVu Sans', Verdana, Geneva, sans-serif;
     color: #333;
 }
 #content h1,
@@ -43,7 +49,7 @@ body {
 #content h4,
 #content h5,
 #content h6 {
-    font-family: PTSansCaption, GillSans, sans-serif;
+    font-family: 'PT Sans Caption', GillSans, sans-serif;
     font-weight: bold;
     color: #666;
 }
