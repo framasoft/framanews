@@ -226,3 +226,14 @@ body {
 #faq {
     background-color: #DBD790;
 }
+/*
+ * Maintenance
+ */
+.maintenance {
+    max-width: 360px;
+    margin-top: 30px;
+}
+#creditsLL {
+    position: absolute;
+    bottom: 0;
+}
