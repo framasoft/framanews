@@ -39,7 +39,8 @@ body {
     border-bottom: none;
 }
 #content p,
-#content li {
+#content li,
+#accordion {
     font-family: 'DejaVu Sans', Verdana, Geneva, sans-serif;
     color: #333;
 }
@@ -59,32 +60,67 @@ body {
 #content h4 {
     font-size: 18.2px;
 }
+hr {
+    height: 0.85em;
+    background-color: #eee;
+    border: none;
+}
 /*
  * Menu de navigation
  */
-#framanews-nav > ul {
+#framanews-nav > ul,
+#install-nav > ul,
+#faq-ttrss-nav > ul {
     font-size: 12px;
     padding-top: 20px;
 }
-#framanews-nav > ul > li {
+#framanews-nav > ul > li,
+#install-nav > ul > li,
+#faq-ttrss-nav > ul > li {
     background-color: #FFF;
 }
 #framanews-nav > ul > li:first-child,
-#framanews-nav > ul > li:first-child > a {
+#framanews-nav > ul > li:first-child > a,
+#install-nav > ul > li:first-child,
+#install-nav > ul > li:first-child > a,
+#faq-ttrss-nav > ul > li:first-child,
+#faq-ttrss-nav > ul > li:first-child > a {
     border-radius: 6px 6px 0 0;
 }
 #framanews-nav > ul > li:last-child,
-#framanews-nav > ul > li:last-child > a {
+#framanews-nav > ul > li:last-child > a,
+#install-nav > ul > li:last-child,
+#install-nav > ul > li:last-child > a,
+#faq-ttrss-nav > ul > li:last-child,
+#faq-ttrss-nav > ul > li:last-child > a {
     border-radius: 0 0 6px 6px;
 }
 #framanews-nav >.nav-list > li > a {
-    border: 1px solid #BCD772;
+    border-color: #BCD772;
+}
+#faq-ttrss-nav >.nav-list > li > a {
+    border-color: rgb(229, 229, 229);
+}
+#install-nav >.nav-list > li > a {
+    border-color: rgb(244, 215, 140);
+}
+#framanews-nav >.nav-list > li > a,
+#install-nav >.nav-list > li > a,
+#faq-ttrss-nav >.nav-list > li > a {
+    border-width: 1px;
+    border-style: solid;
     display: block;
     margin: 0 0 -1px;
     padding: 8px 14px;
 }
-#framanews-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+#framanews-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus,
+#faq-ttrss-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
     background-color: #BCD772;
+    color: #333333;
+    text-shadow: none;
+}
+#install-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+    background-color: #FFE297;
     color: #333333;
     text-shadow: none;
 }
@@ -236,4 +272,61 @@ body {
 #creditsLL {
     position: absolute;
     bottom: 0;
+}
+/*
+ * FAQ TTRSS
+ */
+#body-faq-ttrss {
+    background-color: rgb(240, 240, 240);
+}
+#faq-ttrss {
+    padding-top: 40px;
+}
+.medium-title {
+    font-family:DejaVu Sans, Verdana, Geneva, sans-serif;
+    font-size: 150%;
+    height: 177px;
+}
+#accordion {
+    margin-top: 20px;
+}
+#accordion a,
+#accordion a:hover{
+    color: #333;
+    border: none;
+}
+.accordion-toggle,
+.accordion-inner {
+    background-color: #FFFFFF;
+}
+.accordion-toggle.lead,
+.accordion-inner.lead {
+    margin-bottom: 0;
+}
+#collapseEleven > div > p > small > a {
+    border-bottom: 1px dashed #625092;
+}
+#collapseEleven > div > p > small > a:hover {
+    color: rgb(98, 80, 146);
+    text-decoration: none;
+    border-bottom: 1px dashed rgb(98, 80, 146);
+}
+/*
+ * FAQ installation
+ */
+#install-body {
+    padding-top: 40px;
+}
+#install {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+#install-ttrss {
+    background-color: rgb(255, 226, 151);
+}
+#particular-framanews {
+    background-color: rgb(255, 214, 108);
+}
+.icon-chevron-right.muted {
+    opacity: 0.25;
 }

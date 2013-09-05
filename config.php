@@ -1,0 +1,3 @@
+<?php
+    $instances   = array('ttrss');
+?>
