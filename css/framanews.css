@@ -113,9 +113,13 @@ hr {
     margin: 0 0 -1px;
     padding: 8px 14px;
 }
-#framanews-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus,
-#faq-ttrss-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+#framanews-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
     background-color: #BCD772;
+    color: #333333;
+    text-shadow: none;
+}
+#faq-ttrss-nav >.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+    background-color: #91D0FF;
     color: #333333;
     text-shadow: none;
 }
@@ -277,7 +281,7 @@ hr {
  * FAQ TTRSS
  */
 #body-faq-ttrss {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(145, 208, 255);
 }
 #faq-ttrss {
     padding-top: 40px;

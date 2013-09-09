@@ -223,7 +223,7 @@
                         </li>
                         <li class="lead">
                             <p>Pourquoi une inscription obligatoire&nbsp;?</p>
-                            <p><small>C&rsquo;est vrai, la majorité des services de Framasoft sont utilisables sans inscription, mais la nature même d&rsquo;un lecteur de flux RSS nous a poussé à choisir une solution avec inscription.</small></p>
+                            <p><small>C&rsquo;est vrai, la majorité des services de Framasoft sont utilisables sans inscription, mais la nature même d&rsquo;un lecteur de flux RSS nous a poussés à choisir une solution avec inscription.</small></p>
                             <p><small>Alors que <a href="http://framapad.org"><span class="frama">Frama</span><span class="news">pad</span></a>, <a href="http://framacalc.org"><span class="frama">Frama</span><span class="news">calc</span></a>, <a href="http://framadate.org"><span class="frama">Frama</span><span class="news">date</span></a> et consorts sont plutôt utilisés pour des besoins ponctuels et limités dans le temps, un lecteur de flux RSS est un service qu&rsquo;on utilise sur une longue durée, dont la vandalisation serait plus grave que sur les autres services évoqués. Pour se prémunir de cela, l&rsquo;inscription est nécessaire.</small></p>
                             <p><small>Framasoft n&rsquo;utilisera vos données — adresse email (nécessaire), nom (facultatif) — que pour les besoins du service (renvoi de mot de passe, etc.). De plus, vous serez automatiquement invité à rejoindre la liste de diffusion dédiée aux utilisateurs de Framanews (voir <a href="http://framalistes.org/sympa/info/framanews_users">ici</a>).</small></p>
                         </li>
@@ -236,7 +236,7 @@
                             <p>Il y a un nouvel article sur tel ou tel site et je le vois pas encore dans Framanews</p>
                             <p><small>Ttrss rafraîchit les flux toutes les 30 minutes par défaut (modifiable pour chaque flux ou sur tous les flux du compte (menu déroulant «&nbsp;Actions&nbsp;», «&nbsp;Configuration&nbsp;») donc si l'article est paru juste après le passage de Ttrss, il ne sera pas vu avant le prochain passage, 30 minutes plus tard.</small></p>
                             <p><small>De plus, Framanews ne bénéficie pas des infrastructures d'un Google Reader ou d'un Feedly, donc rafraîchir les flux de tous les inscrits prend un certain temps.</small></p>
-                            <p><small>Enfin, nous sommes obligés de part notre petite infrastructure d'allonger la durée de rétention du cache des flux à 45 minutes.</small></p>
+                            <p><small>Enfin, nous sommes obligés de par notre petite infrastructure d'allonger la durée de rétention du cache des flux à 45 minutes.</small></p>
                         </li>
                         <li class="lead">
                             <p>Mon navigateur me dit que la connexion est <strong>partiellement</strong> chiffrée. Pourquoi ?</p>
@@ -246,7 +246,7 @@
                         </li>
                         <li class="lead">
                             <p>Comment installer ttrss chez moi&nbsp;? Vous avez changé quoi à ttrss&nbsp;?</p>
-                            <p><small>Comme un certain nombre de personnes nous demande des conseils à ce sujet, nous avons créé une <a href="install.php">page dédiée</a></small>.</p>
+                            <p><small>Comme un certain nombre de personnes nous demandeent des conseils à ce sujet, nous avons créé une <a href="install.php">page dédiée</a></small>.</p>
                         </li>
                         <li class="lead">
                             <p>Une question&nbsp;? Une suggestion&nbsp;?</p>
