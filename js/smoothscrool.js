@@ -43,6 +43,13 @@ $(document).ready(function() {
             $('body:not(:animated)').animate({ scrollTop: target}, duration, easing);
         }
     };
-    $('#framanews-nav .nav li a').click(smoothScroll);
+    var f = $('#framanews-nav');
+    var i = $('#install-nav');
+    if (f !== undefined) {
+        $('#framanews-nav .nav li a').click(smoothScroll);
+    }
+    if (i !== undefined) {
+        $('#install-nav .nav li a').click(smoothScroll);
+    }
     $('.goto').click(smoothScroll);
 });
