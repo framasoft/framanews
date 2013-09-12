@@ -1,3 +1,3 @@
 <?php
-    $instances   = array('ttrss');
+    $instances   = array('ttrss', 'ttrss2');
 ?>
