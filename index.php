@@ -21,7 +21,7 @@
             if ($response->content->places > $bestchoice['places']) {
                 $bestchoice['places'] = $response->content->places;
                 $places = ($bestchoice['places'] > 1) ? ' places disponibles' : ' place disponible';
-                $bestchoice['text'] = '<a class="btn btn-large" href="'.$instance.'/register.php">Encore '.$bestchoice['places'].$places.'</a>';
+                $bestchoice['text'] = '<a class="btn btn-large" href="https://framanews.org/'.$instance.'/register.php">Encore '.$bestchoice['places'].$places.'</a>';
             }
         }
     }
