@@ -246,7 +246,7 @@
                         </li>
                         <li class="lead">
                             <p>Comment installer ttrss chez moi&nbsp;? Vous avez changé quoi à ttrss&nbsp;?</p>
-                            <p><small>Comme un certain nombre de personnes nous demandeent des conseils à ce sujet, nous avons créé une <a href="install.php">page dédiée</a></small>.</p>
+                            <p><small>Comme un certain nombre de personnes nous demandent des conseils à ce sujet, nous avons créé une <a href="install.php">page dédiée</a></small>.</p>
                         </li>
                         <li class="lead">
                             <p>Une question&nbsp;? Une suggestion&nbsp;?</p>
