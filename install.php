@@ -7,48 +7,46 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
         <title>Framanews - Installer TTRSS</title>
 
         <link rel="shortcut icon" href="./favicon.png">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link media="screen" rel="stylesheet" href="nav/lib/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/framanews.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/framanews-responsive.css">
-        <link href="framanav/nav.css" rel="stylesheet"><!-- Framanav -->
-    </head>
+        <script src="nav/lib/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="nav/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="nav/nav.js" id="nav_js" type="text/javascript"></script>
+     </head>
     <body data-spy="scroll" data-target="#install-nav" data-offset="46" id="install-body">
-        <?php include_once('navbar.php'); ?>
         <div id="content">
             <!-- - - - - - - - - - - - - - - - - - Framanews-nav - - - - - - - - - - - - - -->
-            <div class="visible-desktop row-fluid" id="install-nav">
-                <ul class="nav nav-list affix span2">
+            <div class="affix col-md-2 visible-md visible-lg" id="install-nav">
+                <ul class="nav nav-list">
                     <li><a href="#install" >Installer Tiny Tiny RSS</a></li>
                     <li><a href="#install-ttrss" >Documentation</a></li>
-                    <li><a href="#install-requis" ><i class="icon-chevron-right muted"></i> Pré-requis</a></li>
-                    <li><a href="#install-installation" ><i class="icon-chevron-right muted"></i> Installation</a></li>
-                    <li><a href="#install-updating" ><i class="icon-chevron-right muted"></i> Mise à jour des flux</a></li>
-                    <li><a href="#install-help" ><i class="icon-chevron-right muted"></i> Trouver de l'aide</a></li>
+                    <li><a href="#install-requis" ><span class="glyphicon glyphicon-chevron-right muted"></span> Pré-requis</a></li>
+                    <li><a href="#install-installation" ><span class="glyphicon glyphicon-chevron-right muted"></span> Installation</a></li>
+                    <li><a href="#install-updating" ><span class="glyphicon glyphicon-chevron-right muted"></span> Mise à jour des flux</a></li>
+                    <li><a href="#install-help" ><span class="glyphicon glyphicon-chevron-right muted"></span> Trouver de l'aide</a></li>
                     <li><a href="#particular-framanews" >Particularités Framanews</a></li>
-                    <li><a href="#part-fork" ><i class="icon-chevron-right muted"></i> Fork</a></li>
-                    <li><a href="#part-plugins" ><i class="icon-chevron-right muted"></i> Plugins</a></li>
-                    <li><a href="#part-conseils" ><i class="icon-chevron-right muted"></i> Conseils</a></li>
+                    <li><a href="#part-fork" ><span class="glyphicon glyphicon-chevron-right muted"></span> Fork</a></li>
+                    <li><a href="#part-plugins" ><span class="glyphicon glyphicon-chevron-right muted"></span> Plugins</a></li>
+                    <li><a href="#part-conseils" ><span class="glyphicon glyphicon-chevron-right muted"></span> Conseils</a></li>
                     <li><a href="index.php" onclick="window.open('index.php', '_self');">Page d'accueil</a></li>
                     <li><a href="ttrss.php" onclick="window.open('ttrss.php', '_self');">FAQ Tiny Tiny RSS</a></li>
                 </ul>
             </div>
             <!-- - - - - - - - - - - - - - - - - - /Framanews-nav - - - - - - - - - - - - - -->
-            <div class="row-fluid" id="install">
-                <div class="span6 offset3 text-center">
+            <div class="row" id="install">
+                <div class="col-md-6 col-md-offset-3 text-center">
                     <h1>
                         <span class="medium-title">Installer Tiny Tiny RSS</span>
                     </h1>
                 </div>
             </div>
-            <div class="row-fluid slide" id="install-ttrss">
-                <div class="span8 offset2">
+            <div class="row slide" id="install-ttrss">
+                <div class="col-md-8 col-md-offset-2">
                     <h1>Documentation</h1>
                     <div class="lead">
                         <h2>Page officielle</h2>
@@ -121,11 +119,11 @@
                         <p><small>En cas de problème, vous pouvez aller sur le <a href="http://tt-rss.org/forum/">forum officiel de Tiny Tiny RSS</a> (anglophone). Attention, cherchez bien dedans avant de poser une question, l'auteur n'est pas tendre et a son franc-parler. Les habitués aussi d'ailleurs.</small><p>
                         <p><small>Vous pouvez aussi nous demander conseil en passant par la <a href="http://contact.framasoft.org/">page de contact Framasoft</a></small></p>
                     </div>
-                    <a class="btn btn-small pull-right goto" href="#install-body" title="Retour au haut de la page"><i class="icon-arrow-up"></i></a>
+                    <a class="btn btn-default btn-sm pull-right goto" href="#install-body" title="Retour au haut de la page"><span class="glyphicon glyphicon-arrow-up"></span></a>
                 </div>
             </div>
-            <div class="row-fluid slide" id="particular-framanews">
-                <div class="span8 offset2">
+            <div class="row slide" id="particular-framanews">
+                <div class="col-md-8 col-md-offset-2">
                     <h1>Particularités Framanews</h1>
                     <h2 id="part-fork">Fork</h2>
                     <div class="lead">
@@ -143,7 +141,7 @@
                         <p><small>Aucune de ces modifications n'est bloquante&nbsp;: vous pouvez utiliser notre fork pour votre instance ttrss. Vous pouvez récupérer notre fork sur <a href="https://github.com/framasoft/framanews_ttrss">Github</a> (branche "full_french" par défaut).</small></p>
                         <pre>git clone https://github.com/framasoft/framanews_ttrss.git</pre>
                     </div>
-                    <a class="btn btn-small pull-right goto" href="#install-body" title="Retour au haut de la page"><i class="icon-arrow-up"></i></a>
+                    <a class="btn btn-default btn-sm pull-right goto" href="#install-body" title="Retour au haut de la page"><span class="glyphicon glyphicon-arrow-up"></span></a>
                     <h2 id="part-plugins">Plugins</h2>
                     <div class="lead">
                         <p><small>Nous avons aussi développé des plugins ttrss pour nos besoins&nbsp;:</small></p>
@@ -160,7 +158,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a class="btn btn-small pull-right goto" href="#install-body" title="Retour au haut de la page"><i class="icon-arrow-up"></i></a>
+                    <a class="btn btn-default btn-sm pull-right goto" href="#install-body" title="Retour au haut de la page"><span class="glyphicon glyphicon-arrow-up"></span></a>
                     <h2 id="part-conseils">Conseils de Framanews pour une installation de ttrss à fort trafic</h2>
                     <div class="lead">
                         <p><small>Nous avons dû faire face à plusieurs problématiques au fur et à mesure de la mise en place de Framanews. Voici les leçons que nous en avons tiré&nbsp;:</small></p>
@@ -174,8 +172,30 @@
                         </ul>
                         <p>Et surtout&nbsp;: Les utilisateurs sont compréhensifs et sympas. Vraiment. <em>Merci à eux. Merci à vous.</em></p>
                     </div>
-                    <a class="btn btn-small pull-right goto" href="#install-body" title="Retour au haut de la page"><i class="icon-arrow-up"></i></a>
+                    <a class="btn btn-default btn-sm pull-right goto" href="#install-body" title="Retour au haut de la page"><span class="glyphicon glyphicon-arrow-up"></span></a>
                 </div>
+            </div>
+            <div class="col-md-2 visible-xs visible-sm" id="install-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#install" >Installer Tiny Tiny RSS</a></li>
+                    <li><a href="#install-ttrss" >Documentation</a></li>
+                    <ul>
+                        <li><a href="#install-requis" ><span class="glyphicon glyphicon-chevron-right muted"></span> Pré-requis</a></li>
+                        <li><a href="#install-installation" ><span class="glyphicon glyphicon-chevron-right muted"></span> Installation</a></li>
+                        <li><a href="#install-updating" ><span class="glyphicon glyphicon-chevron-right muted"></span> Mise à jour des flux</a></li>
+                        <li><a href="#install-help" ><span class="glyphicon glyphicon-chevron-right muted"></span> Trouver de l'aide</a></li>
+                    </ul>
+                    <li><a href="#particular-framanews" >Particularités Framanews</a></li>
+                    <ul>
+                        <li><a href="#part-fork" ><span class="glyphicon glyphicon-chevron-right muted"></span> Fork</a></li>
+                        <li><a href="#part-plugins" ><span class="glyphicon glyphicon-chevron-right muted"></span> Plugins</a></li>
+                        <li><a href="#part-conseils" ><span class="glyphicon glyphicon-chevron-right muted"></span> Conseils</a></li>
+                    </ul>
+                    <li><a href="index.php" onclick="window.open('index.php', '_self');">Page d'accueil</a></li>
+                    <li><a href="ttrss.php" onclick="window.open('ttrss.php', '_self');">FAQ Tiny Tiny RSS</a></li>
+                </ul>
+                <a class="btn btn-default btn-sm pull-right goto" href="#install-body" title="Retour au haut de la page"><span class="glyphicon glyphicon-arrow-up"></span></a>
             </div>
         </div> <!-- #content -->
         <script src="js/smoothscrool.js"></script>
