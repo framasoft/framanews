@@ -204,7 +204,7 @@
                     <p class="lead">Sinon plusieurs applications pour ttrss existent&nbsp;:</p>
                     <ul>
                         <li class="lead"><a href="https://git.tt-rss.org/git/tt-rss-android">Tiny Tiny RSS</a> (Android)</li>
-                        <li class="lead"><a href="https://code.google.com/p/ttrss-reader-fork/">TTRSS-Reader</a> (Android)</li>
+                        <li class="lead"><a href="https://github.com/nilsbraden/ttrss-reader-fork">TTRSS-Reader</a> (Android)</li>
                         <li class="lead"><a href="https://github.com/andreafortuna/YATTRSSC">YATTRSSC</a> (webapp, fonctionne aussi sur iOs, et sans doute tous les autres OS mobiles permettant l&rsquo;utilisation des webapp)</li>
                         <li class="lead"><a href="https://github.com/jeena/feedmonkey">FeedMonkey</a> (webapp, faite au départ pour Firefox OS, devrait fonctionner partout)</li>
                         <li class="lead"><a href="http://www.mj-devs.fr/ttrss.html">TT-RSS Reader</a> (iOs)</li>
