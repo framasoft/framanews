@@ -1,7 +1,9 @@
 <?php
 // vim:set sw=4 ts=4 ft=php expandtab:
     require_once('config.php');
-    $bestchoice  = array('text' => 'Désolé, il n\'y a plus de place pour l\'instant.', 'places' => 0);
+    $bestchoice    = array('text' => 'Désolé, il n\'y a plus de place pour l\'instant.', 'places' => 0);
+    $best_instance = '';
+    $total_places  = 0;
     foreach ($instances as $instance) {
         $url     = "https://framanews.org/$instance/api/";
         $data    = array('op' => 'placesAvailables');
@@ -17,14 +19,16 @@
         $context  = stream_context_create($options);
         $result   = file_get_contents($url, false, $context);
         if ($result != false) {
-            $response = json_decode($result);
+            $response     = json_decode($result);
+            $total_places = $total_places + $response->content->places;
             if ($response->content->places > $bestchoice['places']) {
                 $bestchoice['places'] = $response->content->places;
-                $places = ($bestchoice['places'] > 1) ? ' places disponibles' : ' place disponible';
-                $bestchoice['text'] = '<a class="btn btn-default btn-lg" href="https://framanews.org/'.$instance.'/register.php">Encore '.$bestchoice['places'].$places.'</a>';
+                $best_instance        = $instance.'/';
             }
         }
     }
+    $places = ($bestchoice['places'] > 1) ? ' places disponibles' : ' place disponible';
+    $bestchoice['text'] = '<a class="btn btn-default btn-lg" href="https://framanews.org/'.$best_instance.'register.php">Encore '.$total_places.$places.'</a>';
 ?>
 <!doctype html>
 <html lang="fr">
@@ -35,14 +39,14 @@
         <title>Framanews - Accueil</title>
 
         <link rel="shortcut icon" href="./favicon.png">
-        <link media="screen" rel="stylesheet" href="nav/lib/bootstrap/css/bootstrap.min.css" />
+        <link media="screen" rel="stylesheet" href="https://framasoft.org/nav/lib/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/framanews.css">
         <link rel="stylesheet" href="css/framanews-responsive.css">
-        <script src="nav/lib/jquery/jquery.min.js" type="text/javascript"></script>
-        <script src="nav/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="nav/nav.js" id="nav_js" type="text/javascript"></script>
+        <script src="https://framasoft.org/nav/lib/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="https://framasoft.org/nav/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     </head>
     <body data-spy="scroll" data-target="#framanews-nav" data-offset="46" id="gototop">
+        <script src="https://framasoft.org/nav/nav.js" type="text/javascript"></script>
         <div id="content">
             <!-- - - - - - - - - - - - - - - - - - Framanews-nav - - - - - - - - - - - - - -->
             <div class="col-md-2 visible-md visible-lg">
@@ -54,9 +58,9 @@
                         <li><a href="#komen-sa-marche">Et comment je fais&nbsp;?</a></li>
                         <li><a href="#framarticle_toolbar">La barre d'outils Framarticle</a></li>
                         <li><a href="#mobilite">Mobilité</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="ttrss.php" onclick="window.open('ttrss.php', '_self');">FAQ Tiny Tiny RSS</a></li>
-                        <li><a href="install.php"  onclick="window.open('install.php', '_self');">Installer Tiny Tiny RSS</a></li>
+                        <li><a href="https://contact.framasoft.org/foire-aux-questions/#framanews" onclick="window.open(this.href, '_self')">FAQ</a></li>
+                        <li><a href="ttrss.php" onclick="window.open(this.href, '_self')">FAQ Tiny Tiny RSS</a></li>
+                        <li><a href="https://framacloud.org/cultiver-son-jardin/installation-de-tinytinyrss/" onclick="window.open(this.href, '_self')">Installer Tiny Tiny RSS</a></li>
                     </ul>
                 </div>
             </div>
@@ -90,7 +94,6 @@
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <h1>
                         <span class="big-title"><span class="frama">Frama</span><span class="news">news</span></span>
-                        <img src="img/beta.png" alt="beta" class="beta">
                     </h1>
                     <!--<p class="lead"><?php print $bestchoice['text'];?></p>-->
                     <a id="btn-ttrss" class="btn btn-default btn-lg" href="#modal" role="button" data-toggle="modal">Connexion / inscription</a>
@@ -210,55 +213,6 @@
                     <a class="btn btn-default btn-sm pull-right goto" href="#gototop" title="Retour au haut de la page"><span class="glyphicon glyphicon-arrow-up"></span></a>
                 </div>
             </div>
-            <div class="row slide" id="faq">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1>F.A.Q.</h1>
-                    <ul>
-                        <li class="lead">
-                            <p>Limitations</p>
-                            <p><small>Nous n'avons qu'une petite infrastructure, aucunement comparable aux géants du web, et cela nous amène à poser certaines limitations :
-                                <ul>
-                                    <li>nous limitons le nombre d'inscriptions par instance de ttrss (environ 250 utilisateurs, mais cela peut varier selon la charge de l'instance). S'il n'y a plus de place, il faut prendre son mal en patience et attendre que nous puissions mettre en place une nouvelle instance.</li>
-                                    <li>nous limitons le nombre de flux par compte à 100. Au-delà, nous risquons de ne plus pouvoir mettre à jour les flux de façon efficace. Si vous avez besoin de plus de flux, nous pouvons éventuellement vous aider à mettre en place votre propre instance de ttrss (voir <a href="install.php">ici</a>)</li>
-                                    <li>au bout de 3 mois sans connexion, nous demandons au titulaire d'un compte s'il a toujours besoin de Framanews et s'il peut laisser sa place à quelqu'un d'autre.</li>
-                                </ul>
-                            </small></p>
-                        </li>
-                        <li class="lead">
-                            <p>Pourquoi une inscription obligatoire&nbsp;?</p>
-                            <p><small>C&rsquo;est vrai, la majorité des services de Framasoft sont utilisables sans inscription, mais la nature même d&rsquo;un lecteur de flux RSS nous a poussés à choisir une solution avec inscription.</small></p>
-                            <p><small>Alors que <a href="http://framapad.org"><span class="frama">Frama</span><span class="news">pad</span></a>, <a href="http://framacalc.org"><span class="frama">Frama</span><span class="news">calc</span></a>, <a href="http://framadate.org"><span class="frama">Frama</span><span class="news">date</span></a> et consorts sont plutôt utilisés pour des besoins ponctuels et limités dans le temps, un lecteur de flux RSS est un service qu&rsquo;on utilise sur une longue durée, dont la vandalisation serait plus grave que sur les autres services évoqués. Pour se prémunir de cela, l&rsquo;inscription est nécessaire.</small></p>
-                            <p><small>Framasoft n&rsquo;utilisera vos données — adresse email (nécessaire), nom (facultatif) — que pour les besoins du service (renvoi de mot de passe, etc.). De plus, vous serez automatiquement invité à rejoindre la liste de diffusion dédiée aux utilisateurs de Framanews (voir <a href="http://framalistes.org/sympa/info/framanews_users">ici</a>).</small></p>
-                        </li>
-                        <li class="lead">
-                            <p>Et la suppression de mon compte&nbsp;?</p>
-                            <p><small>Seul les administrateurs peuvent supprimer un compte. Il faut écrire <a href="http://contact.framasoft.org/">ici</a>.</small></p>
-                            <p><small>La suppression du compte entraîne automatiquement une demande de suppression de votre abonnement à la liste de diffusion dédiée aux utilisateurs de Framanews.</small></p>
-                        </li>
-                        <li class="lead">
-                            <p>Il y a un nouvel article sur tel ou tel site et je le vois pas encore dans Framanews</p>
-                            <p><small>Ttrss rafraîchit les flux toutes les 30 minutes par défaut (modifiable pour chaque flux ou sur tous les flux du compte (menu déroulant «&nbsp;Actions&nbsp;», «&nbsp;Configuration&nbsp;») donc si l'article est paru juste après le passage de Ttrss, il ne sera pas vu avant le prochain passage, 30 minutes plus tard.</small></p>
-                            <p><small>De plus, Framanews ne bénéficie pas des infrastructures d'un Google Reader ou d'un Feedly, donc rafraîchir les flux de tous les inscrits prend un certain temps.</small></p>
-                            <p><small>Enfin, nous sommes obligés de par notre petite infrastructure d'allonger la durée de rétention du cache des flux à 45 minutes.</small></p>
-                        </li>
-                        <li class="lead">
-                            <p>Mon navigateur me dit que la connexion est <strong>partiellement</strong> chiffrée. Pourquoi ?</p>
-                            <p><small>Nous avons mis en place une connexion sécurisée pour l'utilisation de Framanews mais les images qui sont contenues dans vos flux, elles, ne sont pas forcément appelées par une URL sécurisée.</small></p>
-                            <p><small>Le navigateur détecte que certains éléments de la page ne sont pas sécurisés et vous avertit donc.</small></p>
-                            <p><small>Pour les utilisateurs des applications mobiles, il est nécessaire de mettre l'URL sécurisée de Framanews (en <strong>https</strong> donc) pour être sûr du bon fonctionnement de votre application.</small></p>
-                        </li>
-                        <li class="lead">
-                            <p>Comment installer ttrss chez moi&nbsp;? Vous avez changé quoi à ttrss&nbsp;?</p>
-                            <p><small>Comme un certain nombre de personnes nous demandent des conseils à ce sujet, nous avons créé une <a href="install.php">page dédiée</a></small>.</p>
-                        </li>
-                        <li class="lead">
-                            <p>Une question&nbsp;? Une suggestion&nbsp;?</p>
-                            <p><small>C&rsquo;est par <a href="http://contact.framasoft.org/">là</a>&nbsp;!</small></p>
-                        </li>
-                    </ul>
-                    <a class="btn btn-default btn-sm pull-right goto" href="#gototop" title="Retour au haut de la page"><span class="glyphicon glyphicon-arrow-up"></span></a>
-                </div>
-            </div>
             <div class="col-md-2 visible-xs visible-sm">
                 <div class="hidden-print" id="framanews-nav">
                     <h3>Navigation</h3>
@@ -269,9 +223,9 @@
                         <li><a href="#komen-sa-marche">Et comment je fais&nbsp;?</a></li>
                         <li><a href="#framarticle_toolbar">La barre d'outils Framarticle</a></li>
                         <li><a href="#mobilite">Mobilité</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="ttrss.php" onclick="window.open('ttrss.php', '_self');">FAQ Tiny Tiny RSS</a></li>
-                        <li><a href="install.php"  onclick="window.open('install.php', '_self');">Installer Tiny Tiny RSS</a></li>
+                        <li><a href="https://contact.framasoft.org/foire-aux-questions/#framanews" onclick="window.open(this.href, '_self')">FAQ</a></li>
+                        <li><a href="ttrss.php" onclick="window.open(this.href, '_self')">FAQ Tiny Tiny RSS</a></li>
+                        <li><a href="https://framacloud.org/cultiver-son-jardin/installation-de-tinytinyrss/" onclick="window.open(this.href, '_self')">Installer Tiny Tiny RSS</a></li>
                     </ul>
                     <a class="btn btn-default btn-sm pull-right goto" href="#gototop" title="Retour au haut de la page"><span class="glyphicon glyphicon-arrow-up"></span></a>
                 </div>

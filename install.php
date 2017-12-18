@@ -1,5 +1,7 @@
 <?php 
 // vim:set sw=4 ts=4 ft=php expandtab:
+  header('Location: https://framacloud.org/fr/cultiver-son-jardin/ttrss.html');
+  exit();
 ?>
 <!doctype html>
 <html lang="fr">
@@ -11,12 +13,12 @@
         <title>Framanews - Installer TTRSS</title>
 
         <link rel="shortcut icon" href="./favicon.png">
-        <link media="screen" rel="stylesheet" href="nav/lib/bootstrap/css/bootstrap.min.css" />
+        <link media="screen" rel="stylesheet" href="https://framasoft.org/nav/lib/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/framanews.css">
         <link rel="stylesheet" href="css/framanews-responsive.css">
-        <script src="nav/lib/jquery/jquery.min.js" type="text/javascript"></script>
-        <script src="nav/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="nav/nav.js" id="nav_js" type="text/javascript"></script>
+        <script src="https://framasoft.org/nav/lib/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="https://framasoft.org/nav/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://framasoft.org/nav/nav.js" type="text/javascript"></script>
      </head>
     <body data-spy="scroll" data-target="#install-nav" data-offset="46" id="install-body">
         <div id="content">
