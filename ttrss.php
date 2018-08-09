@@ -184,10 +184,9 @@
                                 </a>
                             </div>
                             <div id="collapseTwelve" class="panel-collapse collapse">
-                                <div class="panel-body lead">  
+                                <div class="panel-body lead">
                                     <p><small>Ttrss possède un grand nombre de raccourcis claviers très utiles.</small></p>
                                     <p><small>Pour consulter la liste des raccourcis claviers disponibles, dans le menu «&nbsp;Actions&nbsp;», choisir «&nbsp;Aide sur les raccourcis clavier&nbsp;».</small></p>
-                                    <p><small>Pour utiliser les raccourcis clavier alors que vous utilisez l'extension Firefox <a href="http://5digits.org/pentadactyl/index">Pentadactyl</a>, il suffit de passer en mode "Pass Through" en faisant un Ctrl+z.</small></p>
                                     <p><small>Pour les accros à Vim, vous pouvez intervertir les raccourcis clavier des touches j et k grâce au plugin <code>swap_jk</code> et ainsi retrouver un comportement semblable à celui de votre éditeur préféré.</small></p>
                                 </div>
                             </div>
