@@ -199,9 +199,7 @@
                         <img src="img/mobile_version.png" alt="Version mobile de Framanews" style="width:100%">
                     </div>
                     <h1>Mobilité</h1>
-                    <p class="lead">Parce que nous sommes tous les jours plus mobiles, Framanews possède un mode tablette, qui conviendra tout aussi bien aux smartphones.</p>
-                    <p class="lead">Nous avons aussi installé un client HTML + JavaScript optimisé pour les mobiles mais qui convient aussi pour le bureau : <a href="https://framanews.org/enyojs/">https://framanews.org/enyojs/</a> (voir sur le <a href="https://discourse.tt-rss.org/">forum de ttrss</a> pour les sources).</p>
-                    <p class="lead">Sinon plusieurs applications pour ttrss existent&nbsp;:</p>
+                    <p class="lead">Plusieurs applications pour ttrss existent&nbsp;:</p>
                     <ul>
                         <li class="lead"><a href="https://git.tt-rss.org/git/tt-rss-android">Tiny Tiny RSS</a> (Android)</li>
                         <li class="lead"><a href="https://github.com/nilsbraden/ttrss-reader-fork">TTRSS-Reader</a> (Android)</li>
