@@ -138,19 +138,6 @@
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a class="accordion-toggle lead" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
-                                    Intégration à Firefox
-                                </a>
-                            </div>
-                            <div id="collapseNine" class="panel-collapse collapse">
-                                <div class="panel-body lead">
-                                    <p><small>Pour que Firefox enregistre Framanews comme lecteur de flux, dans le menu «&nbsp;Actions&nbsp;», choisir «&nbsp;Configuration&nbsp;», aller sur l&rsquo;onglet «&nbsp;Flux&nbsp;» puis, en bas, cliquer sur «&nbsp;Intégration à Firefox&nbsp;».</small></p>
-                                    <p><small>Lorsque vous cliquerez sur un lien vers un flux RSS, Firefox vous proposera directement de l&rsquo;ajouter dans Framanews.</small></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
                                 <a class="accordion-toggle lead" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
                                     Activation de plugins
                                 </a>
